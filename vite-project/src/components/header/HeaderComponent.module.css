@@ -5,8 +5,8 @@
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   gap: 24px;
-   margin-bottom: 32px;
+   /* gap: 24px; */
+   margin-bottom: 12px;
 }
 .header_block {
    display: flex;
