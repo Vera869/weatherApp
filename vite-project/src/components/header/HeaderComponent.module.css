@@ -1,0 +1,25 @@
+.header_box {
+   width: 100%;
+   min-height: 100px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 24px;
+   margin-bottom: 32px;
+}
+.header_block {
+   display: flex;
+   flex-direction: row;
+   gap: 20px;
+}
+.header_img {
+   width: 105px;
+   height: 105px;
+}
+.header {
+   font-weight: 400;
+   font-style: normal;
+   font-size: 72px;
+   color: #6f42c1;
+}
