@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-const citySlice = createSlice({
-  name: 'city',
+const weatherSlice = createSlice({
+  name: 'weather',
   initialState: {
     cityName: "",
     isLoading: false,
@@ -10,15 +10,17 @@ const citySlice = createSlice({
   reducers: {
     setCityName(state, action) {
       state.cityName = action.payload
-      console.log(state.cityName);
     },
     setCityWeather(state, action) {
-      state.cityWeather = action.payload
+      state.cityWeather= action.payload
     },
     setIsLoading(state, action) {
       state.isLoading = action.payload
     },
+    setWeekDay(state, action) {
+      state.cityName = action.payload
+    },
   },
 })
-export const cityReducer = citySlice.reducer
-export const { setCityName, setIsLoading, setCityWeather } = citySlice.actions;
+export const weatherReducer = weatherSlice.reducer
+export const { setCityName, setIsLoading, setCityWeather } = weatherSlice.actions;

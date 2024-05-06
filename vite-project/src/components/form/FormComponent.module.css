@@ -34,6 +34,13 @@
     color: #9207b7;
    }
 }
+.form_Input_errors {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 24px;
+  color: #b71c07;
+
+}
 .form_Button {
    width: 276px;
    height: 52px;
