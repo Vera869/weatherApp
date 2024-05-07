@@ -8,21 +8,20 @@ import { setApiError, setCityName, setCityWeather, setIsLoading } from '../../st
 const GetCityAtForm = () => {
    const dispatch = useDispatch();
    const [isCityError, setCityError] = useState([]);
-   // const [isApiError, setApiError] = useState("");
    const cityName = useSelector((state) => state.weather.cityName);
    const isLoading = useSelector((state) => state.weather.isLoading);
    const isApiError = useSelector((state) => state.weather.apiError);
-
-   const searchHeandler = () => {
+   
+   const searchHeandler = (event) => {
+      event.preventDefault()
       if(!cityName) return;
       else{
          dispatch(setApiError(""));
+         dispatch(setCityWeather([]));
          dispatch(setIsLoading(true));
          getWeatherCity(cityName).then(data => {
-            
             setCityError([]);
-            const dailyData = data.list.filter(reading => reading.dt_txt.includes("18:00:00"))
-            console.log(dailyData);
+            const dailyData = data.list.filter(reading => reading.dt_txt.includes("15:00:00"));
             dispatch(setCityWeather(dailyData));
             dispatch(setIsLoading(false));
       }).catch(error => {
