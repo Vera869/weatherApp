@@ -6,6 +6,7 @@ const weatherSlice = createSlice({
     cityName: "",
     isLoading: false,
     cityWeather: [],
+    apiError: "",
   },
   reducers: {
     setCityName(state, action) {
@@ -20,7 +21,10 @@ const weatherSlice = createSlice({
     setWeekDay(state, action) {
       state.cityName = action.payload
     },
+    setApiError(state, action) {
+      state.apiError = action.payload
+    },
   },
 })
 export const weatherReducer = weatherSlice.reducer
-export const { setCityName, setIsLoading, setCityWeather } = weatherSlice.actions;
+export const { setCityName, setIsLoading, setCityWeather, setApiError } = weatherSlice.actions;

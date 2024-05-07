@@ -7,12 +7,10 @@ export async function getWeatherCity(city){
    //    throw new Error("Произошла ошибка");
    // } 
    if(response.status === 404) {
-      throw new Error("Произошла ошибка Город не найден");
+      throw new Error("Произошла ошибка: Город не найден");
    }
    if(response.status === 500) {
       throw new Error("Произошла ошибка, сервер сломался");
-   // }if(response.status === 404) {
-   //    throw new Error("Произошла ошибка Город не найден");
    }
     const res = response.json();
    return res
