@@ -3,24 +3,32 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getWeatherCity } from '../../api';
 import { handleCityChange } from '../../utils/ValidationForm';
 import { useState } from 'react';
-import { setCityName, setCityWeather, setIsLoading } from '../../store/WeatherSlice';
+import { setApiError, setCityName, setCityWeather, setIsLoading } from '../../store/WeatherSlice';
 
 const GetCityAtForm = () => {
    const dispatch = useDispatch();
    const [isCityError, setCityError] = useState([]);
    const cityName = useSelector((state) => state.weather.cityName);
    const isLoading = useSelector((state) => state.weather.isLoading);
-
-   const searchHeandler = () => {
+   const isApiError = useSelector((state) => state.weather.apiError);
+   
+   const searchHeandler = (event) => {
+      // делает завпрос в апи  и отправляет ответ в стор через диспатч
+      event.preventDefault()
       if(!cityName) return;
       else{
+         dispatch(setApiError(""));
+         dispatch(setCityWeather([]));
          dispatch(setIsLoading(true));
          getWeatherCity(cityName).then(data => {
-            const dailyData = data.list.filter(reading => reading.dt_txt.includes("18:00:00"))
-            console.log(dailyData);
+            setCityError([]);
+            const dailyData = data.list.filter(reading => reading.dt_txt.includes("15:00:00"));
             dispatch(setCityWeather(dailyData));
             dispatch(setIsLoading(false));
-      }).catch(err => console.log(err))}
+      }).catch(error => {
+         dispatch(setIsLoading(false));
+         dispatch(setApiError(error.message));
+      })}
    }
    return(
       <form className={styles.form}>
@@ -30,8 +38,9 @@ const GetCityAtForm = () => {
                handleCityChange(event, setCityError);
                dispatch(setCityName(event.target.value));
             }}/>
-         <p className={styles.form_Input_errors}>{isCityError}</p>
+         {isCityError? <p className={styles.form_Input_errors}>{isCityError}</p>: ""}
          <button className={styles.form_Button} onClick={searchHeandler}disabled={isLoading}>{isLoading ? "Идёт поиск" : "Узнать погоду"}</button>
+         {isApiError? <p className={styles.form_Input_errors}>{isApiError}</p>: ""}
       </form>
    )
 }
