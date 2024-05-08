@@ -13,6 +13,7 @@ const GetCityAtForm = () => {
    const isApiError = useSelector((state) => state.weather.apiError);
    
    const searchHeandler = (event) => {
+      // делает завпрос в апи  и отправляет ответ в стор через диспатч
       event.preventDefault()
       if(!cityName) return;
       else{

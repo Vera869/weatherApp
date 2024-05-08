@@ -1,7 +1,7 @@
 import styles from './App.module.css'
-import GetCityAtForm from './components/form/FormComponent';
-import HeaderBox from './components/header/HeaderComponent';
-import WeatherBox from './components/weatherBox/WeatherComponent';
+import GetCityAtForm from '../form/FormComponent';
+import HeaderBox from '../header/HeaderComponent';
+import WeatherBox from '../weatherBox/WeatherComponent';
 
 function App() {
   return (

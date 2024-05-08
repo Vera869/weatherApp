@@ -9,7 +9,7 @@ const WeatherBox = () => {
   return (
     <div className={styles.weather}>
       {dailyData.length <= 0 || isApiError ? "" :<div>
-         <h3 className={styles.weather_header}> {cityName} прогноз на сегодня и ближайшие 5 дней</h3>
+         <h3 data-testid="weatherBox_header" className={styles.weather_header}> {cityName} прогноз на сегодня и ближайшие 5 дней</h3>
       <ul className={styles.weather_content}>
          {dailyData.map((weather, index) => {
             const iconcode = weather.weather[0].icon;

@@ -8,6 +8,9 @@ export async function getWeatherCity(city){
    }
    if(response.status === 500) {
       throw new Error("Произошла ошибка, сервер сломался");
+   } 
+   if(!navigator.onLine) {
+      throw new Error("Отсутствует интернет соединение");
    }
     const res = response.json();
    return res

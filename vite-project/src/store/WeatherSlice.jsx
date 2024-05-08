@@ -18,9 +18,6 @@ const weatherSlice = createSlice({
     setIsLoading(state, action) {
       state.isLoading = action.payload
     },
-    setWeekDay(state, action) {
-      state.cityName = action.payload
-    },
     setApiError(state, action) {
       state.apiError = action.payload
     },
