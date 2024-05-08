@@ -4,10 +4,10 @@ const host = 'https://api.openweathermap.org/data/2.5/forecast?';
 export async function getWeatherCity(city){
    const response = await fetch(`${host}q=${city}&appid=${apiKey}&units=metric&lang=ru`);
    if(response.status === 404) {
-      throw new Error("Произошла ошибка: Город не найден");
+      throw new Error("Город не найден");
    }
    if(response.status === 500) {
-      throw new Error("Произошла ошибка, сервер сломался");
+      throw new Error("Сервер сломался");
    } 
    if(!navigator.onLine) {
       throw new Error("Отсутствует интернет соединение");
