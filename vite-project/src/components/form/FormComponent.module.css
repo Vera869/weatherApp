@@ -1,0 +1,90 @@
+.container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  gap: 3vw;
+  align-items: center;
+  margin-bottom: 32px;
+}
+.header {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 6.5vw;
+  color: #6f42c1;
+}
+.Input {
+  width: 35vw;
+  height: 8.4vw;
+  color: #9207b7;
+  border: 2px solid #9207b7;
+  border-radius: 30px;
+  border-color: #9207b7;
+  padding: 2vw;
+  font-weight: 400;
+  font-size: 5.5vw;
+  line-height: 24px;
+  letter-spacing: -0.05px;
+  color: #9207b7;
+  outline-color: #9207b7;
+  text-align: center;
+  background: transparent;
+  /* background-color: darkseagreen; */
+  /* &::placeholder {
+    font-weight: 400;
+    font-size: 5vw;
+    line-height: 24px;
+    letter-spacing: -0.05px;
+    color: #9207b7;
+   } */
+}
+.Input::placeholder {
+  font-weight: 400;
+  font-size: 5vw;
+  line-height: 24px;
+  letter-spacing: -0.05px;
+  color: #9207b7;
+ }
+/* .Input:hover {
+  background-color: darkseagreen;
+}
+
+.Input:active {
+  color: #580ea2;
+  background-color: darkseagreen;
+} */
+.Input_errors {
+  font-weight: 400;
+  font-size: 4vw;
+  line-height: 24px;
+  color: #b71c07;
+  padding: 0 20px;
+}
+.Button {
+   width: 30vw;
+   height: 5vw;
+   border: none;
+   border-radius: 46px;
+   background-color: #9207b7;
+   color: #c2f5ff;
+   font-weight: 400;
+   font-size: 3.5vw;
+   line-height: 4vw;
+   text-align: center;
+   padding: 0.5vw 0.5vw 1vw 0.5vw;
+   cursor: pointer;
+ }
+
+ .Button:hover {
+   background-color: #580ea2;
+ }
+ 
+ .Button:active {
+   color: #580ea2;
+   background-color: #c2f5ff;
+ }
+ 
+ .Button:disabled {
+   color: #580ea2;
+   background-color: #c2f5ff;
+ }
+ 
