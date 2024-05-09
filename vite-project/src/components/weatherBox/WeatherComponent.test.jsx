@@ -8,6 +8,6 @@ vitest.mock('react-redux');
 it("Отображение заголовка в хедере", () => {
    useSelector.mockReturnValue('');
    render(<WeatherBox/>);
-   const message = screen.queryByText(/прогноз на сегодня и ближайшие 5 дней/i);
+   const message = screen.queryByText(/прогноз на 5 дней/i);
    expect(message).toBeDefined();
 })

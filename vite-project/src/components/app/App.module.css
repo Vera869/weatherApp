@@ -1,14 +1,14 @@
 .app {
-  width: auto;
-  height:auto;
+  width: 100%;
+  height:100%;
   margin: 0;
   padding: 20px;
   text-align: center;
   background-color: darkseagreen;
 }
 .app_darck_theme {
-  width: auto;
-  height:auto;
+  width: 100%;
+  height:100%;
   margin: 0;
   padding: 20px;
   text-align: center;

@@ -10,7 +10,7 @@ const WeatherBox = () => {
   return (
     <div className={theme? s.conteiner : s.conteiner_dark }>
       {dailyData.length <= 0 || isApiError ? "" :<div>
-         <h3 className={s.header}> {cityName} прогноз на сегодня и ближайшие 5 дней</h3>
+         <h3 className={s.header}> {cityName} прогноз на 5 дней</h3>
       <ul className={s.content}>
          {dailyData.map((weather, index) => {
             const iconcode = weather.weather[0].icon;
@@ -20,7 +20,7 @@ const WeatherBox = () => {
             const date = day +"."+ month;
             const ms = weather.dt * 1000;
             const weekdayName = new Date(ms).toLocaleString('ru', {weekday: 'long'});
-            return( <li className={s.conteiner_item} key={index}>
+            return( <li className={s.item_conteiner} key={index}>
                   <p className={s.item_header}>{weekdayName}</p>
                   <p className={s.item_header}>{date}</p>
                   <img src={imgURL} className={s.item_img}/>

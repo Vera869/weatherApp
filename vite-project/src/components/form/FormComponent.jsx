@@ -1,4 +1,4 @@
-import styles from './FormComponent.module.css';
+import s from './FormComponent.module.css';
 import { useDispatch, useSelector } from 'react-redux'
 import { getWeatherCity } from '../../api';
 import { handleCityChange } from '../../utils/ValidationForm';
@@ -22,7 +22,7 @@ const GetCityAtForm = () => {
          dispatch(setIsLoading(true));
          getWeatherCity(cityName).then(data => {
             setCityError([]);
-            const dailyData = data.list.filter(reading => reading.dt_txt.includes("15:00:00"));
+            const dailyData = data.list.filter(reading => reading.dt_txt.includes("12:00:00"));
             dispatch(setCityWeather(dailyData));
             dispatch(setIsLoading(false));
       }).catch(error => {
@@ -31,16 +31,16 @@ const GetCityAtForm = () => {
       })}
    }
    return(
-      <form className={styles.form}>
-         <h2 className={styles.form_header}>Выберите город</h2>
-         <input className={styles.form_Input} type="text" name="city" placeholder="Город" value={cityName} 
+      <form className={s.container}>
+         <h2 className={s.header}>Выберите город</h2>
+         <input className={s.Input} type="text" name="city" placeholder="Город" value={cityName} 
             onChange={(event) => {
                handleCityChange(event, setCityError);
                dispatch(setCityName(event.target.value));
             }}/>
-         {isCityError? <p className={styles.form_Input_errors}>{isCityError}</p>: ""}
-         <button className={styles.form_Button} onClick={searchHeandler}disabled={isLoading}>{isLoading ? "Идёт поиск" : "Узнать погоду"}</button>
-         {isApiError? <p className={styles.form_Input_errors}>{isApiError}</p>: ""}
+         {isCityError? <p className={s.Input_errors}>{isCityError}</p>: ""}
+         <button className={s.Button} onClick={searchHeandler}disabled={isLoading}>{isLoading ? "Идёт поиск" : "Узнать погоду"}</button>
+         {isApiError? <p className={s.Input_errors}>{isApiError}</p>: ""}
       </form>
    )
 }

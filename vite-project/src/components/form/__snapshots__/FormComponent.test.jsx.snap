@@ -6,25 +6,25 @@ exports[`Отображение формы 1`] = `
   "baseElement": <body>
     <div>
       <form
-        class="_form_940aab"
+        class="_container_940aab"
       >
         <h2
-          class="_form_header_940aab"
+          class="_header_940aab"
         >
           Выберите город
         </h2>
         <input
-          class="_form_Input_940aab"
+          class="_Input_940aab"
           name="city"
           placeholder="Город"
           type="text"
           value=""
         />
         <p
-          class="_form_Input_errors_940aab"
+          class="_Input_errors_940aab"
         />
         <button
-          class="_form_Button_940aab"
+          class="_Button_940aab"
         >
           Узнать погоду
         </button>
@@ -33,25 +33,25 @@ exports[`Отображение формы 1`] = `
   </body>,
   "container": <div>
     <form
-      class="_form_940aab"
+      class="_container_940aab"
     >
       <h2
-        class="_form_header_940aab"
+        class="_header_940aab"
       >
         Выберите город
       </h2>
       <input
-        class="_form_Input_940aab"
+        class="_Input_940aab"
         name="city"
         placeholder="Город"
         type="text"
         value=""
       />
       <p
-        class="_form_Input_errors_940aab"
+        class="_Input_errors_940aab"
       />
       <button
-        class="_form_Button_940aab"
+        class="_Button_940aab"
       >
         Узнать погоду
       </button>
