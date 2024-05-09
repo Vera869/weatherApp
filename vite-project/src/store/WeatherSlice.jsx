@@ -1,7 +1,7 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from "@reduxjs/toolkit";
 
 const weatherSlice = createSlice({
-  name: 'weather',
+  name: "weather",
   initialState: {
     cityName: "",
     isLoading: false,
@@ -11,21 +11,21 @@ const weatherSlice = createSlice({
   },
   reducers: {
     setCityName(state, action) {
-      state.cityName = action.payload
+      state.cityName = action.payload;
     },
     setCityWeather(state, action) {
-      state.cityWeather= action.payload
+      state.cityWeather= action.payload;
     },
     setIsLoading(state, action) {
-      state.isLoading = action.payload
+      state.isLoading = action.payload;
     },
     setApiError(state, action) {
-      state.apiError = action.payload
+      state.apiError = action.payload;
     },
     setChangeTheme(state) {
-      state.changeTheme = !state.changeTheme
+      state.changeTheme = !state.changeTheme;
     },
   },
-})
-export const weatherReducer = weatherSlice.reducer
+});
+export const weatherReducer = weatherSlice.reducer;
 export const { setCityName, setIsLoading, setCityWeather, setApiError, setChangeTheme } = weatherSlice.actions;
