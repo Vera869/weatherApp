@@ -49,10 +49,10 @@
   margin: 0;
   align-items: center;
   justify-content: flex-start;
-  background-color: #42577c;
-  background-repeat: repeat;
+  background-color: #d3d6db;
+  background-repeat: no-repeat;
   background-size:contain;
-  background-size: 100vh;
-  background-image: url("../../../public/img/night1.avif");
-  animation: movement 10s linear infinite;
+  /* background-size: 100vh; */
+  background-image: url("../../../public/img/night2.jpg");
+  /* animation: movement 10s linear infinite; */
 }
