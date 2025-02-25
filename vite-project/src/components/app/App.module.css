@@ -5,13 +5,8 @@
   100% {
     background-position: 560px 0px;
   }
-}
-@keyframes movementNight {
   0% {
-    background-position: 0px 100px;
-  }
-  100% {
-    background-position: 560px 100px;
+    background-position: 0px 0px;
   }
 }
 
@@ -27,7 +22,7 @@
   min-width: 100vw;
   margin: 0;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   background-color: #bfdfec;
   background-repeat: repeat-x;
   background-image: url("../../../public/img/clouds.png");
@@ -46,17 +41,17 @@
   height:100%;
   margin: 0;
   padding: 20px;
-  text-align: center;
   display: flex;
+  text-align: center;
   flex-direction: column;
   min-height: 100vh;
   min-width: 100vw;
   margin: 0;
   align-items: center;
-  justify-content: center;
-  background-color: #242424;
-  background-repeat: repeat-x;
+  justify-content: flex-start;
+  background-color: #42577c;
   background-repeat: repeat;
+  background-size:contain;
   background-size: 100vh;
   background-image: url("../../../public/img/night1.avif");
   animation: movement 10s linear infinite;
