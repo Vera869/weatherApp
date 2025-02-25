@@ -6,7 +6,8 @@
    gap: 4vw; */
    margin-bottom: 50px;
    padding: 0 5vw 0 5vw;
-   background-color: darkseagreen;
+   background-color: transparent;
+   /* background-color: darkseagreen; */
 }
 .conteiner_dark {
    width: 100%;
@@ -16,7 +17,8 @@
    gap: 4vw; */
    margin-bottom: 50px;
    padding: 0 5vw 0 5vw;
-   background-color: #242424; 
+   background-color: transparent;
+   /* background-color: #242424;  */
 }
 .header {
    font-weight: 400;

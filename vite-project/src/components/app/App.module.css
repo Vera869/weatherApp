@@ -1,17 +1,63 @@
+@keyframes movement {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 560px 0px;
+  }
+}
+@keyframes movementNight {
+  0% {
+    background-position: 0px 100px;
+  }
+  100% {
+    background-position: 560px 100px;
+  }
+}
+
 .app {
   width: 100%;
   height:100%;
   margin: 0;
   padding: 20px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 100vw;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: #bfdfec;
+  background-repeat: repeat-x;
+  background-image: url("../../../public/img/clouds.png");
+  animation: movement 10s linear infinite;
   /* background-color: darkseagreen; */
   
 }
 .app_darck_theme {
+  /* width: 100%;
+  height:100%;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  background-color: #242424;  #42577c  #3b537c*/
   width: 100%;
   height:100%;
   margin: 0;
   padding: 20px;
   text-align: center;
-  background-color: #242424; 
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 100vw;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: #242424;
+  background-repeat: repeat-x;
+  background-repeat: repeat;
+  background-size: 100vh;
+  background-image: url("../../../public/img/night1.avif");
+  animation: movement 10s linear infinite;
 }
