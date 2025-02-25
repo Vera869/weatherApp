@@ -7,7 +7,7 @@ function HeaderBox() {
   return (
     <div className={s.header_block}>
       <img onClick={() => dispatch(setChangeTheme())} src="/img/logo.png" alt="Сменить тему" className={s.header_img}/>
-      <h1 className={s.header}>SearchWeather</h1>
+      <h1 className={s.header}>Weatherly</h1>
     </div>
   );
 }
