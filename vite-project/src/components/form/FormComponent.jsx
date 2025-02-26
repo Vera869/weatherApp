@@ -36,9 +36,13 @@ const GetCityAtForm = () => {
           const date = new Date().toISOString().slice(0, 10);
           // console.log(date);
           // console.log(data.list);
-          const dailyData = data.list.filter((reading) =>
-            reading.dt_txt.includes("12:00:00") && !reading.dt_txt.includes(date)
-          );
+          const dailyData = data.list
+            .filter(
+              (reading) =>
+                reading.dt_txt.includes("12:00:00") &&
+                !reading.dt_txt.includes(date)
+            )
+            .slice(0, 4);
           // console.log(dailyData);
           const todayData = data.list.filter((reading) =>
             reading.dt_txt.includes(date)
