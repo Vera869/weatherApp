@@ -38,7 +38,7 @@ const WeatherBox = () => {
                     </p>
                   </div>
                   <div className={s.item_box}>
-                    <img src="/img/wind.png" className={s.item_icon} />
+                    {/* <img src="/img/wind.png" className={s.item_icon} /> */}
                     <p className={s.item_data}>
                       {weather.wind.speed.toFixed(1)} м/с
                     </p>
