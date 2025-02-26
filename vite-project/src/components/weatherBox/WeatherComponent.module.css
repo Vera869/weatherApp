@@ -28,7 +28,9 @@
 .content {
    display: grid;
    grid-template-columns: repeat(5, 1fr);
-   gap: 2vw;
+   gap: 3vw;
+   align-items: center;
+   padding: 0 2vw 0 2vw;
 }
 /* .item_conteiner - li */
 .item_conteiner {
@@ -36,10 +38,15 @@
    flex-direction: column;
    align-items: center;
    width: 16vw;
-   /* border: 3px solid #9207b7; */
+   border: 3px solid #bfdfec;
    border-radius: 5vw;
    padding: 1vw 0 1vw 0;
-   /* border-style: dotted ; */
+}
+.item_conteiner:hover {
+   cursor: pointer;
+   border: 3px solid #9207b7;
+   border-radius: 5vw;
+   padding: 1vw 0 1vw 0;
 }
 .item_img {
    width: 70%;
