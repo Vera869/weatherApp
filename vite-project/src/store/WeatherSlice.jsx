@@ -4,9 +4,10 @@ const weatherSlice = createSlice({
   name: "weather",
   initialState: {
     cityName: "",
-    titleCity:"",
+    titleCity: "",
     isLoading: false,
     cityWeather: [],
+    todayWeather: [],
     apiError: "",
     changeTheme: true,
   },
@@ -18,7 +19,10 @@ const weatherSlice = createSlice({
       state.titleCity = action.payload;
     },
     setCityWeather(state, action) {
-      state.cityWeather= action.payload;
+      state.cityWeather = action.payload;
+    },
+    setTodayWeather(state, action) {
+      state.todayWeather = action.payload;
     },
     setIsLoading(state, action) {
       state.isLoading = action.payload;
@@ -32,4 +36,12 @@ const weatherSlice = createSlice({
   },
 });
 export const weatherReducer = weatherSlice.reducer;
-export const { setCityName, setTitleCity, setIsLoading, setCityWeather, setApiError, setChangeTheme } = weatherSlice.actions;
+export const {
+  setCityName,
+  setTitleCity,
+  setIsLoading,
+  setCityWeather,
+  setTodayWeather,
+  setApiError,
+  setChangeTheme,
+} = weatherSlice.actions;

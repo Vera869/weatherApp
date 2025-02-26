@@ -27,26 +27,26 @@
 /* .content - ul */
 .content {
    display: grid;
-   grid-template-columns: repeat(5, 1fr);
+   grid-template-columns: repeat(4, 1fr);
    gap: 3vw;
    align-items: center;
-   padding: 0 2vw 0 2vw;
+   padding: 1vw 2vw 1vw 2vw;
 }
 /* .item_conteiner - li */
 .item_conteiner {
    display: flex;
    flex-direction: column;
    align-items: center;
-   width: 16vw;
-   border: 3px solid #bfdfec;
+   width: 20vw;
+   /* border: 3px solid #bfdfec; */
    border-radius: 5vw;
-   padding: 1vw 0 1vw 0;
+   padding: 1vw;
 }
 .item_conteiner:hover {
    cursor: pointer;
-   border: 3px solid #9207b7;
-   border-radius: 5vw;
-   padding: 1vw 0 1vw 0;
+   /* border: 3px solid #9207b7;
+   border-radius: 5vw; */
+   padding: 1vw;
 }
 .item_img {
    width: 70%;
@@ -67,7 +67,7 @@
    flex-direction: row;
    flex-wrap: nowrap;
    align-items: center;
-   gap: 2vw;
+   gap: 0.5vw;
 }
 .item_icon {
    width: 50%;

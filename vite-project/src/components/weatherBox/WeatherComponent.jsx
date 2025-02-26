@@ -4,18 +4,28 @@ import s from "./WeatherComponent.module.css";
 const WeatherBox = () => {
   const cityName = useSelector((state) => state.weather.titleCity);
   const dailyData = useSelector((state) => state.weather.cityWeather);
+  const todayData = useSelector((state) => state.weather.todayData);
   const isApiError = useSelector((state) => state.weather.apiError);
   const theme = useSelector((state) => state.weather.changeTheme);
-
+  const date = new Date().toISOString().slice(0, 10);
   return (
     <div className={theme ? s.conteiner : s.conteiner_dark}>
       {dailyData.length <= 0 || isApiError ? (
         ""
       ) : (
         <>
-          <h3 className={s.header}> {cityName.toUpperCase()} прогноз на 5 дней</h3>
+          <h3 className={s.header}>
+            {" "}
+            {cityName.toUpperCase()} прогноз на 5 дней
+          </h3>
+          {/* <div className={s.card}>
+            <p className={s.card_header}>{todayData.dt_txt.slice(8, 11)}</p>
+            <p className={s.card_header}>{date}</p>
+            <ul className={s.content}></ul>
+          </div> */}
           <ul className={s.content}>
             {dailyData.map((weather, index) => {
+              // console.log(weather.dt_txt.slice(0, 10));
               const iconcode = weather.weather[0].icon;
               const imgURL =
                 "http://openweathermap.org/img/w/" + iconcode + ".png";

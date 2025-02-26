@@ -16,13 +16,14 @@
   justify-content: flex-start;
 }
 .Input {
+  all: unset;
   width: 30vw;
   height: 5vw;
   color: #9207b7;
   border: 2px solid #9207b7;
   border-radius: 30px;
   border-color: #9207b7;
-  padding: 2vw;
+  padding: 0.5vw;
   font-weight: 400;
   font-size: 3.5vw;
   line-height: 24px;
@@ -54,6 +55,7 @@
   padding: 0 20px;
 }
 .Button {
+  all: unset;
   width: 30vw;
   height: 5vw;
   border: none;
