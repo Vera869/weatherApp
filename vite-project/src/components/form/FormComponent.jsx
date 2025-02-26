@@ -20,7 +20,7 @@ const GetCityAtForm = () => {
   const searchHeandler = (event) => {
     // делает завпрос в апи  и отправляет ответ в стор через диспатч
     event.preventDefault();
-    if (!cityName) return;
+    if (!cityName || cityName.length < 3) return;
     else {
       dispatch(setIsLoading(true));
       dispatch(setApiError(""));
