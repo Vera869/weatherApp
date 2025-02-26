@@ -5,24 +5,8 @@
   align-items: flex-start;
   align-content: center;
   justify-content: flex-start;
-  margin-bottom: 32px;
   padding-left: 40px;
 }
-.search {
-  width: 100vw;
-  display: flex;
-  gap: 5vw;
-  align-items: center;
-  align-items: center;
-  justify-content: flex-start;
-  padding-left: 60px;
-}
-/* .header {
-  font-weight: 400;
-  font-style: normal;
-  font-size: 6.5vw;
-  color: #6f42c1;
-} */
 .inputBox,
 .btnBox {
   display: flex;

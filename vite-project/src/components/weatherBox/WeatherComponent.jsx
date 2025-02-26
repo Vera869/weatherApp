@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import s from "./WeatherComponent.module.css";
 
 const WeatherBox = () => {
-  const cityName = useSelector((state) => state.weather.cityName);
+  const cityName = useSelector((state) => state.weather.titleCity);
   const dailyData = useSelector((state) => state.weather.cityWeather);
   const isApiError = useSelector((state) => state.weather.apiError);
   const theme = useSelector((state) => state.weather.changeTheme);
@@ -12,7 +12,7 @@ const WeatherBox = () => {
       {dailyData.length <= 0 || isApiError ? (
         ""
       ) : (
-        <div>
+        <>
           <h3 className={s.header}> {cityName.toUpperCase()} прогноз на 5 дней</h3>
           <ul className={s.content}>
             {dailyData.map((weather, index) => {
@@ -51,7 +51,7 @@ const WeatherBox = () => {
               );
             })}
           </ul>
-        </div>
+        </>
       )}
     </div>
   );

@@ -47,3 +47,10 @@
   background-size: contain;
   background-image: url("../../../public/img/night2.jpg");
 }
+.content {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 3vw;
+}

@@ -8,6 +8,7 @@ import {
   setCityName,
   setCityWeather,
   setIsLoading,
+  setTitleCity,
 } from "../../store/WeatherSlice";
 
 const GetCityAtForm = () => {
@@ -18,13 +19,14 @@ const GetCityAtForm = () => {
   const isApiError = useSelector((state) => state.weather.apiError);
 
   const searchHeandler = (event) => {
-    // делает завпрос в апи  и отправляет ответ в стор через диспатч
+    // делает завпрос в апи  и отправляет ответ в стор
     event.preventDefault();
     if (!cityName || cityName.length < 3) return;
     else {
       dispatch(setIsLoading(true));
       dispatch(setApiError(""));
       dispatch(setCityWeather([]));
+      dispatch(setTitleCity(cityName));
 
       getWeatherCity(cityName)
         .then((data) => {
