@@ -5,10 +5,8 @@ import TodayCard from "../todayCard/TodayCardComponent";
 const WeatherBox = () => {
   const cityName = useSelector((state) => state.weather.titleCity);
   const dailyData = useSelector((state) => state.weather.cityWeather);
-  // const todayData = useSelector((state) => state.weather.todayData);
   const isApiError = useSelector((state) => state.weather.apiError);
   const theme = useSelector((state) => state.weather.changeTheme);
-  // const date = new Date().toISOString().slice(0, 10);
   return (
     <div className={s.conteiner}>
       {dailyData.length <= 0 || isApiError ? (
@@ -21,7 +19,6 @@ const WeatherBox = () => {
           <TodayCard />
           <ul className={s.content}>
             {dailyData.map((weather, index) => {
-              // console.log(weather.dt_txt.slice(0, 10));
               const iconcode = weather.weather[0].icon;
               const imgURL =
                 "http://openweathermap.org/img/w/" + iconcode + ".png";

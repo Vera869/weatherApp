@@ -1,4 +1,4 @@
-@-webkit-keyframes scale-up-left {
+@keyframes scale-up-left {
   0% {
     -webkit-transform: scale(0.5);
     transform: scale(0.5);
@@ -46,6 +46,7 @@
   color: #6f42c1;
   -webkit-animation: scale-up-left 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: scale-up-left 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  text-shadow: 0.03em 0.03em 0 hsla(230, 40%, 50%, 1);
 }
 .dark {
   color: #bfdfec;

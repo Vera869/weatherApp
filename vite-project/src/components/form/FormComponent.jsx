@@ -35,8 +35,6 @@ const FormToCity = () => {
         .then((data) => {
           setCityError([]);
           const date = new Date().toISOString().slice(0, 10);
-          // console.log(date);
-          // console.log(data.list);
           const dailyData = data.list
             .filter(
               (reading) =>
@@ -44,7 +42,6 @@ const FormToCity = () => {
                 !reading.dt_txt.includes(date)
             )
             .slice(0, 4);
-          // console.log(dailyData);
           const todayData = data.list.filter((reading) =>
             reading.dt_txt.includes(date)
           );
