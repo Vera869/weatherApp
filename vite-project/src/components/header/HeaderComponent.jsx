@@ -13,7 +13,17 @@ function HeaderBox() {
         alt="Сменить тему"
         className={s.header_img}
       />
-      <h1 className={theme ? s.header : `${s.header} ${s.dark}`}  data-shadow='Weatherly'>Weatherly</h1>
+      <h1 className={theme ? s.header : `${s.header} ${s.dark}`}>
+        <span>W</span>
+        <span>e</span>
+        <span>a</span>
+        <span>t</span>
+        <span>h</span>
+        <span>e</span>
+        <span>r</span>
+        <span>l</span>
+        <span>y</span>
+      </h1>
     </div>
   );
 }
