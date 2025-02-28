@@ -8,26 +8,29 @@ exports[`Отображение формы 1`] = `
       <form
         class="_container_940aab"
       >
-        <h2
-          class="_header_940aab"
+        <div
+          class="_inputBox_940aab"
         >
-          Выберите город
-        </h2>
-        <input
-          class="_Input_940aab"
-          name="city"
-          placeholder="Город"
-          type="text"
-          value=""
-        />
-        <p
-          class="_Input_errors_940aab"
-        />
-        <button
-          class="_Button_940aab"
+          <input
+            class="_Input_940aab _Input_dark_940aab"
+            name="city"
+            placeholder="Город"
+            type="text"
+            value=""
+          />
+          <p
+            class="_Input_errors_940aab _Input_dark_errors_940aab"
+          />
+        </div>
+        <div
+          class="_btnBox_940aab"
         >
-          Узнать погоду
-        </button>
+          <button
+            class="_Button_940aab"
+          >
+            Узнать погоду
+          </button>
+        </div>
       </form>
     </div>
   </body>,
@@ -35,26 +38,29 @@ exports[`Отображение формы 1`] = `
     <form
       class="_container_940aab"
     >
-      <h2
-        class="_header_940aab"
+      <div
+        class="_inputBox_940aab"
       >
-        Выберите город
-      </h2>
-      <input
-        class="_Input_940aab"
-        name="city"
-        placeholder="Город"
-        type="text"
-        value=""
-      />
-      <p
-        class="_Input_errors_940aab"
-      />
-      <button
-        class="_Button_940aab"
+        <input
+          class="_Input_940aab _Input_dark_940aab"
+          name="city"
+          placeholder="Город"
+          type="text"
+          value=""
+        />
+        <p
+          class="_Input_errors_940aab _Input_dark_errors_940aab"
+        />
+      </div>
+      <div
+        class="_btnBox_940aab"
       >
-        Узнать погоду
-      </button>
+        <button
+          class="_Button_940aab"
+        >
+          Узнать погоду
+        </button>
+      </div>
     </form>
   </div>,
   "debug": [Function],
