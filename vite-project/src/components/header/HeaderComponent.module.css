@@ -1,3 +1,24 @@
+@-webkit-keyframes scale-up-left {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+  }
+  50% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+  }
+  100% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+  }
+}
+
 .header_block {
   width: 80%;
   height: 10%;
@@ -18,16 +39,14 @@
 }
 
 .header {
-  /* min-height: 8%; */
-  font-weight: 400;
-  font-style: normal;
-  font-size: 8vw;
-  color: #6f42c1;
-}
-.header_dark {
   min-height: 8%;
   font-weight: 400;
   font-style: normal;
   font-size: 8vw;
+  color: #6f42c1;
+  -webkit-animation: scale-up-left 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: scale-up-left 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+.dark {
   color: #bfdfec;
 }

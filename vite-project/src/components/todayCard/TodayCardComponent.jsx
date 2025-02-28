@@ -3,9 +3,7 @@ import s from "./TodayCardComponent.module.css";
 
 const TodayCard = () => {
   const todayData = useSelector((state) => state.weather.todayWeather);
-  //   const cityName = useSelector((state) => state.weather.titleCity);
-  //   console.log(todayData);
-  //   const date = new Date().toISOString().slice(0, 10);
+  const theme = useSelector((state) => state.weather.changeTheme);
   const day = todayData[0].dt_txt.slice(8, 11);
   const month = todayData[0].dt_txt.slice(5, 7);
   const date = day + "." + month;
@@ -14,12 +12,23 @@ const TodayCard = () => {
     weekday: "long",
   });
   return (
-    <div className={s.card}>
+    <div className={theme ? s.card : `${s.card} ${s.card_dark}`}>
       <div className={s.header}>
-        {/* {cityName.toUpperCase()} */}
-        <p className={s.header_item}>Сегодня</p>
-        <p className={s.header_item}>{date}</p>
-        <p className={s.header_item}>{weekdayName}</p>
+        <p
+          className={theme ? s.header_item : `${s.header_item} ${s.item_dark}`}
+        >
+          Сегодня
+        </p>
+        <p
+          className={theme ? s.header_item : `${s.header_item} ${s.item_dark}`}
+        >
+          {date}
+        </p>
+        <p
+          className={theme ? s.header_item : `${s.header_item} ${s.item_dark}`}
+        >
+          {weekdayName}
+        </p>
       </div>
       <ul className={s.content}>
         {todayData.map((weather, index) => {
@@ -28,22 +37,25 @@ const TodayCard = () => {
           const time = weather.dt_txt.slice(11, 16);
           return (
             <li className={s.content_item} key={index}>
-              <p className={s.item_header}>{time}</p>
+              <p
+                className={
+                  theme ? s.item_header : `${s.item_header} ${s.item_dark}`
+                }
+              >
+                {time}
+              </p>
               <img src={imgURL} className={s.item_img} />
               <div className={s.item_box}>
-                {/* <img src="/img/term.png" className={s.item_icon} /> */}
                 <p className={s.item_data}>
                   {Math.round(weather.main.temp)}&deg;C
                 </p>
               </div>
               <div className={s.item_box}>
-                {/* <img src="/img/wind.png" className={s.item_icon} /> */}
                 <p className={s.item_data}>
                   {weather.wind.speed.toFixed(1)}м/с
                 </p>
               </div>
               <div className={s.item_box}>
-                {/* <img src="/img/humidity.png" className={s.item_icon} /> */}
                 <p className={s.item_data}>{weather.main.humidity}%</p>
               </div>
             </li>

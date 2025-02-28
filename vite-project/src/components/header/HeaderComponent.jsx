@@ -14,7 +14,7 @@ function HeaderBox() {
         alt="Сменить тему"
         className={s.header_img}
       />
-      <h1 className={theme ? s.header : s.header_dark}>Weatherly</h1>
+      <h1 className={theme ? s.header : `${s.header} ${s.dark}`}>Weatherly</h1>
     </div>
   );
 }

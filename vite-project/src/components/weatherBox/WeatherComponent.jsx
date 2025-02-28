@@ -10,7 +10,7 @@ const WeatherBox = () => {
   const theme = useSelector((state) => state.weather.changeTheme);
   // const date = new Date().toISOString().slice(0, 10);
   return (
-    <div className={theme ? s.conteiner : s.conteiner_dark}>
+    <div className={s.conteiner}>
       {dailyData.length <= 0 || isApiError ? (
         ""
       ) : (

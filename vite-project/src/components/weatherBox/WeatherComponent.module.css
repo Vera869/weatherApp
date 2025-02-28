@@ -28,7 +28,6 @@
    flex-direction: column;
    align-items: center;
    width: 20vw;
-   /* border: 3px solid #bfdfec; */
    border-radius: 5vw;
    padding: 1vw;
 }
@@ -44,7 +43,6 @@
    height: 70%;
 }
 .item_header {
-   /* padding: 10px; */
    font-weight: 400;
    font-size: 4vw;
    line-height: 4vw;
@@ -67,22 +65,13 @@
 .item_data {
    color: #9207b7;
    font-size:  5vw;
-   /* width: auto;
-   height: auto; */
 }
 
 /* dark theme */
 
-.conteiner_dark {
-   width: 100%;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   gap: 3vw;
-   justify-content: flex-start;
-   align-content: center;
-   background-color: transparent;
-}
 .header_dark {
+   color: #97cce0;
+}
+.time {
    color: #97cce0;
 }
