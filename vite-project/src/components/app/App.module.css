@@ -24,7 +24,7 @@
   justify-content: flex-start;
   background-color: #bfdfec;
   background-repeat: repeat-x;
-  background-image: url("../../../public/img/clouds.png");
+  background-image: url("/img/clouds.png");
   animation: movement 10s linear infinite;
   
 }
@@ -43,7 +43,7 @@
   background-color: #d3d6db;
   background-repeat: no-repeat;
   background-size: 100%;
-  background-image: url("../../../public/img/night2.jpg");
+  background-image: url("/img/night2.jpg");
 }
 .content {
   width: 100%;

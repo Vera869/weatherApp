@@ -12,7 +12,7 @@ import {
   setTodayWeather,
 } from "../../store/WeatherSlice";
 
-const GetCityAtForm = () => {
+const FormToCity = () => {
   const dispatch = useDispatch();
   const theme = useSelector((state) => state.weather.changeTheme);
   const [isCityError, setCityError] = useState([]);
@@ -113,4 +113,4 @@ const GetCityAtForm = () => {
     </form>
   );
 };
-export default GetCityAtForm;
+export default FormToCity;

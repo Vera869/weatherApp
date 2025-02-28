@@ -1,9 +1,9 @@
 import styles from "./App.module.css";
-import GetCityAtForm from "../form/FormComponent";
 import HeaderBox from "../header/HeaderComponent";
 import WeatherBox from "../weatherBox/WeatherComponent";
 import { useSelector } from "react-redux";
 import FooterBox from "../footer/footerComponent";
+import FormToCity from "../form/FormComponent";
 
 function App() {
   const theme = useSelector((state) => state.weather.changeTheme);
@@ -11,7 +11,7 @@ function App() {
     <div className={theme ? styles.app : styles.app_darck_theme}>
       <HeaderBox />
       <div  className={styles.content}>
-        <GetCityAtForm />
+        <FormToCity />
         <WeatherBox />
       </div>
       <FooterBox />

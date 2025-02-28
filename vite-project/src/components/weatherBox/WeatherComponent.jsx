@@ -15,7 +15,7 @@ const WeatherBox = () => {
         ""
       ) : (
         <>
-          <h3 className={s.header}>
+          <h3 className={theme ? s.header : `${s.header} ${s.header_dark}`}>
             {cityName.toUpperCase()} прогноз на 5 дней
           </h3>
           <TodayCard />
