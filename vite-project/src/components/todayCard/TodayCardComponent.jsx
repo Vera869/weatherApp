@@ -15,7 +15,7 @@ const TodayCard = () => {
     <div className={theme ? s.card : `${s.card} ${s.card_dark}`}>
       <div className={s.header}>
         <p
-          className={theme ? s.header_item_1 : `${s.header_item} ${s.item_dark}`}
+          className={theme ? s.header_item_1 : `${s.header_item_1} ${s.item_dark}`}
         >
           Сегодня  
         </p>
