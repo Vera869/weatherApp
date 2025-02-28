@@ -44,9 +44,10 @@
 }
 .item_conteiner:hover {
    cursor: pointer;
-   /* border: 3px solid #9207b7;
-   border-radius: 5vw; */
+   border: 3px solid #9207b7;
+   border-radius: 5vw;
    padding: 1vw;
+   background-color: #97cce0;;
 }
 .item_img {
    width: 70%;

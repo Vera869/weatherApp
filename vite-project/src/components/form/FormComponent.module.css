@@ -76,10 +76,10 @@
 
 .Button:active {
   color: #580ea2;
-  background-color: #c2f5ff;
+  background-color: #97cce0;
 }
 
 .Button:disabled {
   color: #580ea2;
-  background-color: #c2f5ff;
+  background-color: #97cce0;
 }

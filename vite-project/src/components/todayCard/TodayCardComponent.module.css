@@ -1,12 +1,13 @@
 .card {
-   width: calc(100vw - 20vh);
+   width: calc(100vw - 6vh);
    height: fit-content;
    display: flex;
    flex-direction: column;
    gap: 1.5 vw;
-   background-color: aquamarine;
+   background-color: transparent;
    border-radius: 3vw;
    border: 1px solid #6f42c1;
+   padding: 1vw;
 }
 .header {
    width: 80%;
@@ -15,18 +16,47 @@
 
 }
 .header_item {
-   color: #6f42c1;
-   font-size: 24px;
    font-weight: 400;
+   font-style: normal;
+   font-size: 5vw;
+   color: #6f42c1;
 }
 .content {
    display: flex;
+   justify-content: space-around;
    gap: 1vw;
    padding: 1vw;
 }
-.item_conteiner {
+.content_item{
    display: flex;
    flex-direction: column;
    gap: 1vw;
-
+   color: #6b188b;
+}
+.item_header {
+   font-weight: 400;
+   font-style: normal;
+   font-size: 5vw;
+   color: #6f42c1;
+}
+.item_img {
+   width: 70%;
+   height: 70%;
+}
+.item_box {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   align-items: center;
+   gap: 0.5vw;
+}
+.item_icon {
+   width: 50%;
+   height: 50%;
+}
+.item_data {
+   color: #9207b7;
+   font-size:  5vw;
+   /* width: auto;
+   height: auto; */
 }
