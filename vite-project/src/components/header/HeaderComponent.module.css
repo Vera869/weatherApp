@@ -1,26 +1,94 @@
+@keyframes scale-up-left {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+  }
+  50% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+  }
+  100% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+  }
+}
+
 .header_block {
-   width: 100%;
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
-   gap: 20px;
-   padding: 0 20px;
-   margin-bottom: 12px;
-   /* flex-wrap: wrap; */
+  width: 80%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  padding-left: 20px;
 }
 .header_img {
-   width: 15%;
-   height: 15%;
-   border-radius: 20px;
-   &:hover {
-      cursor: pointer;
-   }
+  width: 4vw;
+  height: 4vw;
+  border-radius: 20px;
 }
+.header_img:hover {
+  cursor: pointer;
+}
+
 .header {
-   min-height: 10%;
-   font-weight: 400;
-   font-style: normal;
-   font-size: 8vw;
-   color: #6f42c1;
+  min-height: 8%;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 8vw;
+  color: #6f42c1;
+  /* -webkit-animation: scale-up-left 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: scale-up-left 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  text-shadow: 0.03em 0.03em 0 hsla(230, 40%, 50%, 1); */
+}
+h1 span {
+  position: relative;
+  top: 19px;
+  display: inline-block;
+  animation: bounce .5s ease infinite alternate;
+  font-size: 8vw;
+  color: #6f42c1;
+  text-shadow: 0 1px 0 #bfdfec,
+  0 2px 0 #bfdfec,
+  0 3px 0 #bfdfec,
+  0 4px 0 #bfdfec,
+  0 5px 0 #bfdfec,
+  0 6px 0 transparent,
+  0 7px 0 transparent,
+  0 8px 0 transparent,
+  0 9px 0 transparent,
+  0 10px 10px rgba(0, 0, 0, .4);
+}
+h1 span:nth-child(2) { animation-delay: .1s; }
+h1 span:nth-child(3) { animation-delay: .2s; }
+h1 span:nth-child(4) { animation-delay: .3s; }
+h1 span:nth-child(5) { animation-delay: .4s; }
+h1 span:nth-child(6) { animation-delay: .5s; }
+h1 span:nth-child(7) { animation-delay: .6s; }
+h1 span:nth-child(8) { animation-delay: .7s; }
+
+@keyframes bounce {
+  100% {
+  top: -20px;
+  text-shadow: 0 1px 0 #b1d1dd,
+  0 2px 0 #b1d1dd,
+  0 3px 0 #b1d1dd,
+  0 4px 0 #b1d1dd,
+  0 5px 0 #b1d1dd,
+  0 6px 0 #b1d1dd,
+  0 7px 0 #b1d1dd,
+  0 8px 0 #b1d1dd,
+  0 9px 0 #b1d1dd,
+  0 50px 25px rgba(0, 0, 0, .2);
+  }
+}
+.dark {
+  color: #bfdfec;
 }
