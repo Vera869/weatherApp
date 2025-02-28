@@ -22,13 +22,11 @@
   color: #9207b7;
   border: 2px solid #9207b7;
   border-radius: 30px;
-  border-color: #9207b7;
   padding: 0.5vw;
   font-weight: 400;
   font-size: 3.5vw;
   line-height: 24px;
   letter-spacing: -0.05px;
-  color: #9207b7;
   outline-color: #9207b7;
   text-align: center;
   background: transparent;
@@ -40,11 +38,9 @@
   letter-spacing: -0.05px;
   color: #9207b7;
 }
-.Input:hover {
-  background-color: transparent;
-}
-.Input:active {
-  color: #580ea2;
+.Input:hover,
+.Input:active,
+.Input:focus {
   background-color: transparent;
 }
 .Input_errors {
@@ -82,4 +78,28 @@
 .Button:disabled {
   color: #580ea2;
   background-color: #97cce0;
+}
+
+/* dark theme */
+
+.Input_dark {
+  color: #97cce0;;
+  border: 2px solid #97cce0;
+}
+.Input_dark::placeholder {
+  color: #97cce0;
+}
+.Input_dark:hover,
+.Input_dark:active,
+.Input_dark:focus {
+  background-color: transparent;
+}
+.Input_dark_errors {
+  background-color: #97cce0;
+  border-radius: 10px;
+  width: fit-content;
+  /* height: 3vw; */
+  align-items: center;
+  /* border: 1px solid #b71c07; */
+  /* padding: 0.5vw; */
 }

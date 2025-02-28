@@ -14,6 +14,7 @@ import {
 
 const GetCityAtForm = () => {
   const dispatch = useDispatch();
+  const theme = useSelector((state) => state.weather.changeTheme);
   const [isCityError, setCityError] = useState([]);
   const cityName = useSelector((state) => state.weather.cityName);
   const isLoading = useSelector((state) => state.weather.isLoading);
@@ -62,7 +63,7 @@ const GetCityAtForm = () => {
     <form className={s.container}>
       <div className={s.inputBox}>
         <input
-          className={s.Input}
+          className={theme ? s.Input : `${s.Input} ${s.Input_dark}`}
           type="text"
           name="city"
           placeholder="Город"
@@ -72,7 +73,19 @@ const GetCityAtForm = () => {
             dispatch(setCityName(event.target.value));
           }}
         />
-        {isCityError ? <p className={s.Input_errors}>{isCityError}</p> : ""}
+        {isCityError ? (
+          <p
+            className={
+              theme
+                ? s.Input_errors
+                : `${s.Input_errors} ${s.Input_dark_errors}`
+            }
+          >
+            {isCityError}
+          </p>
+        ) : (
+          ""
+        )}
       </div>
 
       <div className={s.btnBox}>
@@ -83,7 +96,19 @@ const GetCityAtForm = () => {
         >
           {isLoading ? "Идёт поиск" : "Узнать погоду"}
         </button>
-        {isApiError ? <p className={s.Input_errors}>{isApiError}</p> : ""}
+        {isApiError ? (
+          <p
+            className={
+              theme
+                ? s.Input_errors
+                : `${s.Input_errors} ${s.Input_dark_errors}`
+            }
+          >
+            {isApiError}
+          </p>
+        ) : (
+          ""
+        )}
       </div>
     </form>
   );

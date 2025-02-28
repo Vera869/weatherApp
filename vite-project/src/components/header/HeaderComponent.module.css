@@ -18,9 +18,16 @@
 }
 
 .header {
-  min-height: 10%;
+  /* min-height: 8%; */
   font-weight: 400;
   font-style: normal;
-  font-size: 4vw;
+  font-size: 8vw;
   color: #6f42c1;
+}
+.header_dark {
+  min-height: 8%;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 8vw;
+  color: #bfdfec;
 }
